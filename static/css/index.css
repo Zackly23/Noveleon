@@ -1,0 +1,166 @@
+body {
+  overflow: auto;
+
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0px;
+  }
+  
+  h1, h3  {
+    text-transform: uppercase;
+   }
+  
+.counter
+  {
+      text-align: center;
+  }
+  
+.counter-count
+  {
+      font-size: 50px;
+      font-weight: bold;
+      position: relative;
+      color: black !important;
+      text-align: center;
+      display: inline-block;
+
+  }
+
+.container {
+    margin-top: 10px;
+
+  }
+
+.card {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+
+.count {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.percentage {
+  font-size: 2.5rem;
+}
+
+.counter {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: -8rem;
+}
+
+.counter .card {
+  background-color: rgb(233, 227, 227, 0.7)!important;
+}
+
+.navbar {
+  background-color: transparent !important;
+}
+
+.nav-link {
+  color: wheat !important;
+}
+
+.inputData {
+  color: wheat;
+  /* background-color: red !important; */
+  width: 50% !important;
+  position: absolute;
+  /* justify-content: center;
+  align-items: center; */
+  text-align : center;
+  top: 40%;
+  left: 25%;
+}
+
+.hero {
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+  border: 1px solid #fff;
+}
+
+.generate {
+  background-color: rgb(202, 202, 30) !important;
+  color: rgb(15, 15, 15) !important;
+}
+
+.content {
+  top: 100px;
+}
+
+.navbar-toggler {
+  background-color: white !important;
+  border-color: white !important;
+  border-width: thin;
+}
+
+@media screen and (max-width: 600px) {
+  .counter-count, .percentage, .genretype {
+    font-size: 1.2rem;
+  }
+
+  .counter {
+    top: -5rem;
+  }
+}
+
+#button {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (min-width: 500px) {
+  #button {
+    margin: 30px;
+  }
+}

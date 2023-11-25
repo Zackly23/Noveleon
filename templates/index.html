@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noveleon</title>
+    <link rel="stylesheet" href={{url_for('static', filename='css/bootstrap.min.css')}}>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+</head>
+<body style="margin: 0; padding: 0;">
+  <a id="button"></a>
+  <div class="hero">
+    <div class="nav-section">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: absolute; width: 100%;">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#">Noveleon</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profile</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Computer Vision - ANPR</a></li>
+                  <li><a class="dropdown-item" href="#">Movie RecSys NeuCF</a></li>
+                  <li><a class="dropdown-item" href="#">Skin Cancer Segmentation</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Data Visualization Projects</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid" style="height: 100vh; margin: 0; padding: 0;">
+        <img src="../static/assets/background.jpg" style="width: 100%; height: 100vh;" alt="gedung" srcset="">
+    </div>
+    <div class="inputData">
+      <form action="" method="POST">
+        <!-- Name input -->
+        <div class="form-outline mb-3">
+          <input type="text" id="judul" class="form-control" name="judul" placeholder="Masukkan Judul" />
+        </div>
+  
+        <!-- Message input -->
+        <div class="form-outline mb-3">
+          <textarea class="form-control" id="form4Example3" rows="2" name="sinopsis" placeholder="Masukkan Sinopsis"></textarea>
+      
+        <!-- Select Button Model -->
+        <br>
+        <select class="form-select" name="model"> 
+          <option selected>Pilih Model Machine Learning</option> 
+          <option value="SVM">Support Vector Machine</option> 
+          <option value="LR">Logistic Regression</option> 
+          <option value="RFC">Random Forest</option>
+          <option value="NBC">Naive Bayes</option> 
+          <option value="XGB">XGBoost</option>  
+        </select> 
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-block mt-2 mb-0 generate">Generate</button>
+      </form>
+    </div>  
+  </div>
+
+  {% if open %}
+    <div style="position: relative;">
+      <div class="counter">
+        <div class="container">
+            <div class="row gy-1 gx-2 mt-3">
+              {% for genre, perc in percentage.items() %}
+                <div class="col-md-3 col-3 col-lg-3">
+                    <div class="card">
+                        <div class="card-body count-up" style="border-color: black;">
+                            <div class="count">
+                                <p class="counter-count">{{perc}}</p>
+                                <p class="percentage">%</p>
+                            </div>
+                            <h3 class="genretype">{{genre}}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+  
+            </div>
+        </div>
+      </div>
+    </div>
+  
+  <div style="height: 100vh; position: relative;" class="content">
+    <div class="container" style="justify-content: center; align-items: center;">
+      <p style="text-align: center; font-size: 1.5rem; font-family: 'Courier New', Courier, monospace;">Novel Lain Yang Mungkin Kamu Suka</p>
+      <div class="row gy-3 p-2">
+          {% for index, rec in recommend.iterrows() %}
+          <div class="col-12 col-md-6 col-lg-3">
+              <div class="card h-100">
+                  <img src={{url_for('static', filename='assets/novel/' + rec.Source)}}  alt="David" srcset="" style="width: 100%; height: 300px;">
+                  <div class="card-body">
+                      <h5 class="card-title">{{rec.Title}}</h5>
+                      <p class="card-text">
+                        {{rec.Sinopsis[:100] + '...'}}
+                      </p>
+                  </div>    
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+  </div>
+  {% endif %}
+
+<script src={{url_for('static', filename='js/popper.min.js')}}></script>
+<script src={{url_for('static', filename='js/bootstrap.min.js')}}></script>
+<script src={{url_for('static', filename='js/count.js')}}></script>
+</body>
+</html>
