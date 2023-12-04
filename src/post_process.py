@@ -1,9 +1,10 @@
+import pickle
 import numpy as np
 import pandas as pd
 from numpy import dot
 from numpy.linalg import norm
-from config import Model
-from config import VectorDataset
+from src.config import Model
+from src.config import VectorDataset
 
 VECTORDATA = VectorDataset()
 MODEL = Model()
