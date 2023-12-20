@@ -1,4 +1,4 @@
-![Sequence Length Masin masing Genre](https://github.com/Zackly23/Noveleon/assets/65446701/6587c94b-e826-48c2-990f-fd1c752224f9)# Noveleon
+# Noveleon
 ## Genre Classification and Novel Recommendation Project
 
 ## Overview
