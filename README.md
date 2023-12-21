@@ -30,7 +30,7 @@ Wordclouds visually represent the most frequently occurring words in the synopse
 
 | Left-aligned | Center-aligned | Right-aligned | Sejarah |
 | :---         |     :---:      |          ---: | :---:   |
-| git status   | git status     | ![Edited_Romance](https://github.com/Zackly23/Noveleon/assets/65446701/a8e5bea0-0f75-48fb-9b2a-afc545101783) | ![Edited_Horor](https://github.com/Zackly23/Noveleon/assets/65446701/8b012729-3705-4f03-af52-ef6f07e5e420) |
+| ![Edited_Fantasi](https://github.com/Zackly23/Noveleon/assets/65446701/a1f2085c-eb06-4230-bee9-07061288d07c = 250x250) | ![Edited_Sejarah](https://github.com/Zackly23/Noveleon/assets/65446701/38bdcb7c-545b-4304-bb85-d87007a4f08e = 250x250)| ![Edited_Romance](https://github.com/Zackly23/Noveleon/assets/65446701/a8e5bea0-0f75-48fb-9b2a-afc545101783 = 250x250) | ![Edited_Horor](https://github.com/Zackly23/Noveleon/assets/65446701/8b012729-3705-4f03-af52-ef6f07e5e420 = 250x250) |
 | git diff     | git diff       | git diff      | gambar lagi |
 
 
