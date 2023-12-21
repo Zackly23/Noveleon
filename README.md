@@ -28,5 +28,9 @@ Wordclouds visually represent the most frequently occurring words in the synopse
 ![Edited_Romance](https://github.com/Zackly23/Noveleon/assets/65446701/a8e5bea0-0f75-48fb-9b2a-afc545101783)
 ![Edited_Horor](https://github.com/Zackly23/Noveleon/assets/65446701/8b012729-3705-4f03-af52-ef6f07e5e420)
 
+| Left-aligned | Center-aligned | Right-aligned | Sejarah |
+| :---         |     :---:      |          ---: | :---:   |
+| git status   | git status     | git status    | gambar1 |
+| git diff     | git diff       | git diff      | gambar lagi |
 
 
